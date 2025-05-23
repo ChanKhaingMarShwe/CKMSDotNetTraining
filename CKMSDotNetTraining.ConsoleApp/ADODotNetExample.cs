@@ -91,5 +91,37 @@ namespace CKMSDotNetTraining.ConsoleApp
 
         }
       
+        public void Edit()
+        {
+            Console.Write("Enter BlogId :");
+            String blogId = Console.ReadLine();
+            SqlConnection connection = new SqlConnection(_connectionString);
+            connection.Open();
+
+
+            String query = @"SELECT [BlogId]
+      ,[BlogTitle]
+      ,[BlogAuthor]
+      ,[BlogContent]
+      ,[DeleteFlag]
+  FROM [dbo].[Tbl_blog] Where [BlogId]=@BlogId;
+
+";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@BlogId", blogId);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Console.WriteLine("BlogId: " + reader["BlogId"]);
+                Console.WriteLine("BlogTitle: " + reader["BlogTitle"]);
+                Console.WriteLine("BlogAuthor: " + reader["BlogAuthor"]);
+                Console.WriteLine("BlogContent: " + reader["BlogContent"]);
+                Console.WriteLine();
+            }
+
+
+            connection.Close();
+        }
     }
 }

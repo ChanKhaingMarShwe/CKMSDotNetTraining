@@ -10,5 +10,6 @@ Console.WriteLine("Hello, World!");
 // md = markdown
 ADODotNetExample adodotnet = new ADODotNetExample();
 //adodotnet.Read();
-adodotnet.Create();
+//adodotnet.Create();
+adodotnet.Edit();
 Console.ReadKey();
