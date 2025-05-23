@@ -60,6 +60,19 @@ namespace CKMSDotNetTraining.ConsoleApp
             }
         }
 
+        public void Edit(int id)
+        {
+            using(IDbConnection db = new SqlConnection(_connectionString))
+            {
+                string query = "Select * From Tbl_blog where BlogId=@BlogId and DeleteFlag=0;";
+                db.Open();
+                BlogDataModel item = db.Query<BlogDataModel>(query, new { BlogId = id }).FirstOrDefault();
+                Console.WriteLine(item.BlogId);
+                Console.WriteLine(item.BlogTitle);
+                Console.WriteLine(item.BlogAuthor);
+                Console.WriteLine(item.BlogContent);
+            }
+        }
        
     }
 }
