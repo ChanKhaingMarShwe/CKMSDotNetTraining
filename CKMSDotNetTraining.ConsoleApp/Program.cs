@@ -12,5 +12,6 @@ ADODotNetExample adodotnet = new ADODotNetExample();
 //adodotnet.Read();
 //adodotnet.Create();
 //adodotnet.Edit();
-adodotnet.Update();
+//adodotnet.Update();
+adodotnet.Delete();
 Console.ReadKey();

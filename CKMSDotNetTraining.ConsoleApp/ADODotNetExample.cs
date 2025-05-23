@@ -155,5 +155,20 @@ namespace CKMSDotNetTraining.ConsoleApp
 
             connection.Close();
         }
-    }
+
+        public void Delete()
+        {
+            Console.Write("Enter BlogId :");
+            String blogId = Console.ReadLine();
+            SqlConnection connection = new SqlConnection(_connectionString);
+            connection.Open();
+            String query = @"DELETE FROM [dbo].[Tbl_blog]
+      WHERE [BlogId]=@BlogId";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@BlogId", blogId);
+            int result = cmd.ExecuteNonQuery();
+            Console.WriteLine(result == 1 ? "Delete successfully !" : "Delete fail !");
+            connection.Close();
+        }
+        }
 }
