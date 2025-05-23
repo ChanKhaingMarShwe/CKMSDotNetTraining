@@ -19,5 +19,6 @@ DapperExample dapper = new DapperExample();
 //dapper.Read();
 //dapper.Create("Dapper Title", "Dapper Author", "Dapper Content");
 //dapper.Edit(4);
-dapper.Update(3, "Dapper UTitle", "Dapper UAuthor", "Dapper UContent");
+//dapper.Update(3, "Dapper UTitle", "Dapper UAuthor", "Dapper UContent");
+dapper.Delete(10);
 Console.ReadKey();

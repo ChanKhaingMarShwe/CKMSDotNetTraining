@@ -98,6 +98,20 @@ namespace CKMSDotNetTraining.ConsoleApp
 
             }
         }
-       
+
+        public void Delete(int id)
+        {
+            using(IDbConnection db = new SqlConnection(_connectionString))
+            {
+
+                String query = @"DELETE FROM [dbo].[Tbl_blog] WHERE BlogId= @BlogId";
+                
+               int result= db.Execute(query, new { BlogId = id });
+               
+                Console.WriteLine(result == 1 ? "Delete successfully !" : "Delete fail !");
+            }
+        }
     }
+
+
 }
