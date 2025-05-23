@@ -13,5 +13,9 @@ ADODotNetExample adodotnet = new ADODotNetExample();
 //adodotnet.Create();
 //adodotnet.Edit();
 //adodotnet.Update();
-adodotnet.Delete();
+//adodotnet.Delete();
+
+DapperExample dapper = new DapperExample();
+dapper.Read();
+
 Console.ReadKey();
