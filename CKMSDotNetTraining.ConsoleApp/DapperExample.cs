@@ -31,6 +31,35 @@ namespace CKMSDotNetTraining.ConsoleApp
             }
         }
 
+        public void Create(String blogTitle, String blogAuthor, String blogContent)
+        {
+
+            using (IDbConnection db = new SqlConnection(_connectionString))
+            {
+                string query = @"INSERT INTO [dbo].[Tbl_blog]
+           ([BlogTitle]
+           ,[BlogAuthor]
+           ,[BlogContent]
+           ,[DeleteFlag])
+     VALUES
+           (@BlogTitle
+           ,@BlogAuthor
+           ,@BlogContent
+           ,0)";
+
+                db.Open();
+                int result=db.Execute(query, new BlogDataModel
+                {
+                    BlogTitle=blogTitle,
+                    BlogAuthor=blogAuthor,
+                    BlogContent=blogContent
+                });
+                Console.WriteLine(result == 1 ? "Saving Successfully !":"Saving fail !");
+                db.Close();
+
+            }
+        }
+
        
     }
 }
