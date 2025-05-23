@@ -11,5 +11,6 @@ Console.WriteLine("Hello, World!");
 ADODotNetExample adodotnet = new ADODotNetExample();
 //adodotnet.Read();
 //adodotnet.Create();
-adodotnet.Edit();
+//adodotnet.Edit();
+adodotnet.Update();
 Console.ReadKey();
