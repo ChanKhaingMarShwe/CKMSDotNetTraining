@@ -73,6 +73,31 @@ namespace CKMSDotNetTraining.ConsoleApp
                 Console.WriteLine(item.BlogContent);
             }
         }
+
+        public void Update(int blogId,String blogTitle,string blogAuthor,string blogContent)
+        {
+            using (IDbConnection db = new SqlConnection(_connectionString))
+            {
+                String query = @"UPDATE [dbo].[Tbl_blog]
+   SET [BlogTitle] = @BlogTitle
+      ,[BlogAuthor] = @BlogAuthor
+      ,[BlogContent] = @BlogContent
+ WHERE [BlogId]=@BlogId;
+";
+
+                db.Open();
+                int result = db.Execute(query, new BlogDataModel
+                {
+                    BlogId= blogId,
+                    BlogTitle = blogTitle,
+                    BlogAuthor = blogAuthor,
+                    BlogContent = blogContent
+                });
+                Console.WriteLine(result == 1 ? "Updating Successfully !" : "Updating fail !");
+                db.Close();
+
+            }
+        }
        
     }
 }
