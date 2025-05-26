@@ -26,5 +26,6 @@ EFCoreExample ef = new EFCoreExample();
 //ef.Read();
 //ef.Create("Ef title", "Ef Author", "Ef Content");
 //ef.Edit(5);
-ef.Update(5, "Ef UTitle", "Ef UAuthor", "Ef UContent");
+//ef.Update(5, "Ef UTitle", "Ef UAuthor", "Ef UContent");
+ef.Delete(9);
 Console.ReadKey();

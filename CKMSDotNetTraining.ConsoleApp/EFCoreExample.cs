@@ -16,15 +16,15 @@ namespace CKMSDotNetTraining.ConsoleApp
         {
             AppDbContext db = new AppDbContext();
 
-            var lst = db.Blogs.Where(x=>x.DeleteFlag==false).ToList();
+            var lst = db.Blogs.Where(x => x.DeleteFlag == false).ToList();
 
             foreach (var item in lst)
             {
                 Console.WriteLine("Blog ID: " + item.BlogId);
-               Console.WriteLine("Blog Title :"+item.BlogTitle);
+                Console.WriteLine("Blog Title :" + item.BlogTitle);
                 Console.WriteLine("Blog Author: " + item.BlogAuthor);
-                 Console.WriteLine("Blog Content: " + item.BlogContent);
-                 Console.WriteLine("-----------------------------");
+                Console.WriteLine("Blog Content: " + item.BlogContent);
+                Console.WriteLine("-----------------------------");
             }
 
 
@@ -45,30 +45,30 @@ namespace CKMSDotNetTraining.ConsoleApp
             db.Blogs.Add(blog);
             int result = db.SaveChanges();
             Console.WriteLine(result == 1 ? "Saving Successfully !" : "Saving fail !");
-        
 
-            
+
+
         }
 
         public void Edit(int id)
         {
-          
-                AppDbContext db = new AppDbContext();
+
+            AppDbContext db = new AppDbContext();
             var item = db.Blogs.FirstOrDefault(x => x.BlogId == id);
 
             if (item == null)
             {
                 Console.WriteLine("Data not found !");
             }
-                Console.WriteLine(item.BlogId);
-                Console.WriteLine(item.BlogTitle);
-                Console.WriteLine(item.BlogAuthor);
-                Console.WriteLine(item.BlogContent);
-            }
+            Console.WriteLine(item.BlogId);
+            Console.WriteLine(item.BlogTitle);
+            Console.WriteLine(item.BlogAuthor);
+            Console.WriteLine(item.BlogContent);
+        }
 
 
 
-        public void Update(int id,String blogTitle, String blogAuthor, String blogContent)
+        public void Update(int id, String blogTitle, String blogAuthor, String blogContent)
         {
 
             AppDbContext db = new AppDbContext();
@@ -104,5 +104,19 @@ namespace CKMSDotNetTraining.ConsoleApp
         }
 
 
+        public void Delete(int id)
+        {
+            AppDbContext db = new AppDbContext();
+            var item = db.Blogs.FirstOrDefault(x => x.BlogId == id);
+            if (item is null)
+            {
+                Console.WriteLine("Data not found !");
+                return;
+            }
+
+            db.Entry(item).State = EntityState.Deleted;
+            int result = db.SaveChanges();
+            Console.WriteLine(result == 1 ? "Delete Successfully !" : "Delete fail !");
+        }
     }
 }
