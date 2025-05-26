@@ -23,5 +23,6 @@ DapperExample dapper = new DapperExample();
 //dapper.Delete(10);
 
 EFCoreExample ef = new EFCoreExample();
-ef.Read();
+//ef.Read();
+ef.Create("Ef title", "Ef Author", "Ef Content");
 Console.ReadKey();

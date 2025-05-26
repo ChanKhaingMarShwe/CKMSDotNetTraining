@@ -1,5 +1,7 @@
-﻿using System;
+﻿using CKMSDotNetTraining.ConsoleApp.Models;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,5 +27,26 @@ namespace CKMSDotNetTraining.ConsoleApp
 
 
         }
+
+
+        public void Create(String blogTitle, String blogAuthor, String blogContent)
+        {
+
+            BlogEFCoreDataModel blog = new BlogEFCoreDataModel
+            {
+                BlogTitle = blogTitle,
+                BlogAuthor = blogAuthor,
+                BlogContent = blogContent
+            };
+
+            AppDbContext db = new AppDbContext();
+            db.Blogs.Add(blog);
+            int result = db.SaveChanges();
+            Console.WriteLine(result == 1 ? "Saving Successfully !" : "Saving fail !");
+        
+
+            
+        }
+
     }
 }
