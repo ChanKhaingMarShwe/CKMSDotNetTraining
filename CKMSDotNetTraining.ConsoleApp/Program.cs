@@ -20,5 +20,8 @@ DapperExample dapper = new DapperExample();
 //dapper.Create("Dapper Title", "Dapper Author", "Dapper Content");
 //dapper.Edit(4);
 //dapper.Update(3, "Dapper UTitle", "Dapper UAuthor", "Dapper UContent");
-dapper.Delete(10);
+//dapper.Delete(10);
+
+EFCoreExample ef = new EFCoreExample();
+ef.Read();
 Console.ReadKey();
