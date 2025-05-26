@@ -1,4 +1,5 @@
 ﻿using CKMSDotNetTraining.ConsoleApp.Models;
+using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -47,6 +48,24 @@ namespace CKMSDotNetTraining.ConsoleApp
 
             
         }
+
+        public void Edit(int id)
+        {
+          
+                AppDbContext db = new AppDbContext();
+            var item = db.Blogs.FirstOrDefault(x => x.BlogId == id);
+
+            if (item == null)
+            {
+                Console.WriteLine("Data not found !");
+            }
+                Console.WriteLine(item.BlogId);
+                Console.WriteLine(item.BlogTitle);
+                Console.WriteLine(item.BlogAuthor);
+                Console.WriteLine(item.BlogContent);
+            }
+        
+
 
     }
 }
