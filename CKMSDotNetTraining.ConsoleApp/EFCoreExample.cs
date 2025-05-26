@@ -1,5 +1,6 @@
 ﻿using CKMSDotNetTraining.ConsoleApp.Models;
 using Dapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -64,7 +65,43 @@ namespace CKMSDotNetTraining.ConsoleApp
                 Console.WriteLine(item.BlogAuthor);
                 Console.WriteLine(item.BlogContent);
             }
-        
+
+
+
+        public void Update(int id,String blogTitle, String blogAuthor, String blogContent)
+        {
+
+            AppDbContext db = new AppDbContext();
+            var item = db.Blogs.AsNoTracking().FirstOrDefault(x => x.BlogId == id);
+
+            if (item == null)
+            {
+                Console.WriteLine("Data not found !");
+                return;
+            }
+
+
+            if (!string.IsNullOrEmpty(blogTitle))
+            {
+                item.BlogTitle = blogTitle;
+            }
+            if (!string.IsNullOrEmpty(blogAuthor))
+            {
+                item.BlogAuthor = blogAuthor;
+            }
+            if (!string.IsNullOrEmpty(blogContent))
+            {
+                item.BlogContent = blogContent;
+            }
+
+            db.Entry(item).State = EntityState.Modified;
+
+            int result = db.SaveChanges();
+            Console.WriteLine(result == 1 ? "Update Successfully !" : "Update fail !");
+
+
+
+        }
 
 
     }
