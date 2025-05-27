@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
 
-namespace CKMSDotNetTraining.RestApi
+namespace CKMSDotNetTraining.RestApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
