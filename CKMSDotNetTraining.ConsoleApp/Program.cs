@@ -27,5 +27,12 @@ EFCoreExample ef = new EFCoreExample();
 //ef.Create("Ef title", "Ef Author", "Ef Content");
 //ef.Edit(5);
 //ef.Update(5, "Ef UTitle", "Ef UAuthor", "Ef UContent");
-ef.Delete(9);
+//ef.Delete(9);
+
+AdoDotNetExample2 ado = new AdoDotNetExample2();
+//ado.Read();
+//ado.Create();
+//ado.Edit();
+//ado.Update();
+ado.Delete(); 
 Console.ReadKey();

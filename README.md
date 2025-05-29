@@ -31,3 +31,20 @@ Nuget Package
 
    data model(data access, database)
    View model(frontend return data)
+   ------------------------------------
+   mssql
+   C# basic
+
+   Console App( Create project)
+   Ado .Net
+   Dapper
+   EFCore
+   EFcore Database first
+   northwind database
+   Rest Api ( ASP .Net Core Web api )
+   .Net 7
+
+   .Net core 3.1
+   ------------------------------------
+
+
