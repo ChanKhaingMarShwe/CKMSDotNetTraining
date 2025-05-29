@@ -34,5 +34,12 @@ AdoDotNetExample2 ado = new AdoDotNetExample2();
 //ado.Create();
 //ado.Edit();
 //ado.Update();
-ado.Delete(); 
+//ado.Delete(); 
+
+DapperExample2 dapper1 = new DapperExample2();
+//dapper1.Read();
+//dapper1.Create("Dapper2 Title", "Dapper2 Author", "Dapper2 Content");
+//dapper.Edit(1019);
+//dapper1.Update(1019, "Dapper2 UTitle", "Dapper2 UAuthor", "Dapper2 UContent");
+dapper1.Delete(1019);
 Console.ReadKey();
