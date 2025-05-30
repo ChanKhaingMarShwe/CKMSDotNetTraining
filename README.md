@@ -47,4 +47,6 @@ Nuget Package
    .Net core 3.1
    ------------------------------------
 
+   File.json
 
+   Read => Conver object[] => Insert => Read => Write

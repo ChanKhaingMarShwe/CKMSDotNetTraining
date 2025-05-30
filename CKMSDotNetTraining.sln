@@ -18,6 +18,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.RestApi"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.Shared", "CKMSDotNetTraining.Shared\CKMSDotNetTraining.Shared.csproj", "{2A225EFC-62F1-466F-9911-0B309641260F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.MinimalApi", "CKMSDotNetTraining.MinimalApi\CKMSDotNetTraining.MinimalApi.csproj", "{1BC75179-75D0-40D6-9C8E-7114311EA938}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.BirdMinimalApi", "CKMSDotNetTraining.BirdMinimalApi\CKMSDotNetTraining.BirdMinimalApi.csproj", "{AB2910E2-57B2-4ED1-8D4B-78FEE017CF1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.BlogMininalApi", "CKMSDotNetTraining.BlogMininalApi\CKMSDotNetTraining.BlogMininalApi.csproj", "{A8EB4EB8-E161-47B1-BEBF-E04BFF7C408D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.ConsoleApp3", "CKMSDotNetTraining.ConsoleApp3\CKMSDotNetTraining.ConsoleApp3.csproj", "{69FB0BFE-0B70-415F-A43F-4AB3CDE48FE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +52,22 @@ Global
 		{2A225EFC-62F1-466F-9911-0B309641260F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A225EFC-62F1-466F-9911-0B309641260F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A225EFC-62F1-466F-9911-0B309641260F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BC75179-75D0-40D6-9C8E-7114311EA938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC75179-75D0-40D6-9C8E-7114311EA938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC75179-75D0-40D6-9C8E-7114311EA938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC75179-75D0-40D6-9C8E-7114311EA938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB2910E2-57B2-4ED1-8D4B-78FEE017CF1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB2910E2-57B2-4ED1-8D4B-78FEE017CF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB2910E2-57B2-4ED1-8D4B-78FEE017CF1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB2910E2-57B2-4ED1-8D4B-78FEE017CF1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8EB4EB8-E161-47B1-BEBF-E04BFF7C408D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8EB4EB8-E161-47B1-BEBF-E04BFF7C408D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8EB4EB8-E161-47B1-BEBF-E04BFF7C408D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8EB4EB8-E161-47B1-BEBF-E04BFF7C408D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69FB0BFE-0B70-415F-A43F-4AB3CDE48FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69FB0BFE-0B70-415F-A43F-4AB3CDE48FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69FB0BFE-0B70-415F-A43F-4AB3CDE48FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69FB0BFE-0B70-415F-A43F-4AB3CDE48FE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
