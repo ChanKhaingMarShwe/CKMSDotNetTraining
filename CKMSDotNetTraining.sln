@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.BlogMini
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.ConsoleApp3", "CKMSDotNetTraining.ConsoleApp3\CKMSDotNetTraining.ConsoleApp3.csproj", "{69FB0BFE-0B70-415F-A43F-4AB3CDE48FE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.Domain", "CKMSDotNetTraining.Domain\CKMSDotNetTraining.Domain.csproj", "{BF49E447-9138-4512-B254-A5DE3E59C452}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{69FB0BFE-0B70-415F-A43F-4AB3CDE48FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69FB0BFE-0B70-415F-A43F-4AB3CDE48FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69FB0BFE-0B70-415F-A43F-4AB3CDE48FE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF49E447-9138-4512-B254-A5DE3E59C452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF49E447-9138-4512-B254-A5DE3E59C452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF49E447-9138-4512-B254-A5DE3E59C452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF49E447-9138-4512-B254-A5DE3E59C452}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

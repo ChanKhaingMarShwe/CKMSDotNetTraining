@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CKMSDotNetTraining.Database\CKMSDotNetTraining.Database.csproj" />
+    <ProjectReference Include="..\CKMSDotNetTraining.Domain\CKMSDotNetTraining.Domain.csproj" />
   </ItemGroup>
 
 </Project>

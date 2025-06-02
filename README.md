@@ -50,3 +50,48 @@ Nuget Package
    File.json
 
    Read => Conver object[] => Insert => Read => Write
+
+   -------------------------------------------------------
+
+   Kpay
+
+   Mobile No
+
+   Me - Another one
+
+   Id
+   FullName
+   MobileNo
+   Balance
+
+   Bank => Deposit => Withdraw => Transfer
+
+   Deposit Api + ( mobile no, balance)
+   Withdraw Api   -  
+
+
+   Transfer
+   From Mobile No
+   To Mobile No
+   Amount
+   Pin
+   Notes
+
+   From Mobile No != To Mobile No
+   pin == 1234
+   Banlance 
+   From banlance -
+   To balance + 
+   Message (completed, failed)
+   Transaction history
+   Create Wallet User
+   Login
+   Change Pin
+   Change password
+   Forggt password
+   Reset password
+   First Time login
+   Balance Api
+
+
+

@@ -1,4 +1,5 @@
-﻿using CKMSDotNetTraining.Database.Models;
+﻿
+using CKMSDotNetTraining.Database.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CKMSDotNetTraining.MinimalApi.Endpoints.Blog;
@@ -13,8 +14,8 @@ public static class BlogEndpoint
             var models = db.TblBlogs.AsNoTracking().ToList();
             return Results.Ok(models);
         })
-.WithName("Getblogs")
-.WithOpenApi();
+            .WithName("Getblogs")
+            .WithOpenApi();
 
 
         app.MapGet("/blogs/{id}", (int id) =>
@@ -27,10 +28,10 @@ public static class BlogEndpoint
             }
             return Results.Ok(model);
         })
-            .WithName("GetBlog")
-            .WithOpenApi();
+        .WithName("GetBlog")
+        .WithOpenApi();
 
-        app.MapPost("/blogs", (TblBlog model) =>
+        app.MapPost("/blogs", (TblBlog model) => // Explicitly specify the namespace
         {
             AppDbContext db = new AppDbContext();
             db.TblBlogs.Add(model);
