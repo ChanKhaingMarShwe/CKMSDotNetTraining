@@ -5,6 +5,7 @@ using System.Net;
 // Set before making any HTTP requests
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls13;
 Console.WriteLine("Hello, World!");
+Console.ReadLine();
 
 
 HttpClientExample httpClientExample = new HttpClientExample();
@@ -20,4 +21,7 @@ RestClientExample restClientExample = new RestClientExample();
 //await restClientExample.Edit(1);
 //await restClientExample.Update(1,"Updated title","Update Body",1);
 //await restClientExample.Create("New Post", "This is the body of the new post.", 1);
-await restClientExample.Delete(1);
+//await restClientExample.Delete(1);
+
+RefitExample refitExample = new RefitExample();
+await refitExample.Run();

@@ -87,22 +87,40 @@ namespace CKMSDotNetTraining.RestApi.Controllers
             return Ok(item);
         }
 
-        [HttpDelete("{id}")]
+        //[HttpDelete("{id}")]
+        //public IActionResult DeleteBlog(int id)
+        //{
+
+        //    var item = _db.TblBlogs.AsNoTracking().FirstOrDefault(x => x.BlogId == id);
+        //    if (item is null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    item.DeleteFlag = true;
+
+        //    _db.Entry(item).State = EntityState.Modified;
+        //    _db.SaveChanges();
+        //    return Ok(item);
+        //}
+
+
+
+        [HttpDelete("id")]
         public IActionResult DeleteBlog(int id)
         {
-
-            var item = _db.TblBlogs.AsNoTracking().FirstOrDefault(x => x.BlogId == id);
+            var item = _db.TblBlogs.FirstOrDefault(x => x.BlogId == id);
             if (item is null)
             {
                 return NotFound();
             }
 
-            item.DeleteFlag = true;
-
-            _db.Entry(item).State = EntityState.Modified;
+            _db.TblBlogs.Remove(item);  // <-- This deletes the record from the DB
             _db.SaveChanges();
+
             return Ok(item);
         }
+
 
     }
 }
