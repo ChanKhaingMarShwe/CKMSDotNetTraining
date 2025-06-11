@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using CKMSDotNetTraining.ConsoleApp;
+using Microsoft.Extensions.DependencyInjection;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
@@ -41,5 +42,12 @@ DapperExample2 dapper1 = new DapperExample2();
 //dapper1.Create("Dapper2 Title", "Dapper2 Author", "Dapper2 Content");
 //dapper.Edit(1019);
 //dapper1.Update(1019, "Dapper2 UTitle", "Dapper2 UAuthor", "Dapper2 UContent");
-dapper1.Delete(1019);
+//dapper1.Delete(1019);
+
+
+var services =new ServiceCollection().AddSingleton<ADODotNetExample>().BuildServiceProvider();
+
+var adoDotNetExample=services.GetRequiredService<ADODotNetExample>();
+adoDotNetExample.Read();
+
 Console.ReadKey();

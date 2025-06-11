@@ -8,14 +8,13 @@ namespace CKMSDotNetTraining.RestApi.Controllers
     [ApiController]
     public class BlogServiceController : Controller
     {
-        private readonly BlogService _blogService;
+        private readonly IBlogService _blogService;
 
 
-        public BlogServiceController()
+       public BlogServiceController(IBlogService blogService)
         {
-            _blogService = new BlogService();
+            _blogService = blogService ?? throw new ArgumentNullException(nameof(blogService));
         }
-
 
 
         [HttpGet]

@@ -10,9 +10,12 @@ namespace CKMSDotNetTraining.RestApi.Controllers
     public class BlogsAdoDotNetController : ControllerBase
     {
 
-        private readonly string _connectionString = "Data Source=localhost;Initial Catalog=CKMSDotNetTraining;User ID=sa;Password=YourPassword123!;TrustServerCertificate=true;";
+        private readonly string _connectionString;
 
-
+        public BlogsAdoDotNetController(IConfiguration configuration)
+        {
+            _connectionString = configuration.GetConnectionString("DbConnection")!;
+        }
 
         [HttpGet]
         public IActionResult GetBlogs()

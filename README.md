@@ -95,3 +95,8 @@ Nuget Package
 
 
 
+   MVC
+
+   model view controller
+
+   Controller => Model => Model ( view )=> Page (html)

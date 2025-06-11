@@ -7,20 +7,18 @@ namespace CKMSDotNetTraining.Database.Models;
 public partial class AppDbContext : DbContext
 {
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        if (!optionsBuilder.IsConfigured)
-        {
-            String connectionString = "Data Source=localhost;Initial Catalog=CKMSDotNetTraining;User ID=sa;Password=YourPassword123!;TrustServerCertificate=true;";
-            optionsBuilder.UseSqlServer(connectionString);
-        }
-    }
-    public AppDbContext()
-    {
-    }
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //{
+    //    if (!optionsBuilder.IsConfigured)
+    //    {
+    //        String connectionString = "Data Source=localhost;Initial Catalog=CKMSDotNetTraining;User ID=sa;Password=YourPassword123!;TrustServerCertificate=true;";
+    //        optionsBuilder.UseSqlServer(connectionString);
+    //    }
+    //}
+   
 
-    public AppDbContext(DbContextOptions<AppDbContext> options)
-        : base(options)
+
+    public AppDbContext(DbContextOptions options) : base(options)
     {
     }
 
