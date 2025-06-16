@@ -1,0 +1,88 @@
+﻿<a href="/BlogAjax/Create" class="btn btn-outline-primary">Create Blog</a>
+
+<table>
+    <thead>
+        <tr>
+
+            <th>No .</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Author</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody id="tbDataTable">
+       
+        </tbody>
+
+
+
+
+</table>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+           loadData();
+                
+        });
+
+       function loadData() {
+            $.ajax({
+                url: '/BlogAjax/BlogList',
+                type: 'GET',
+                success: function (data) {
+                     console.log(data);
+                     $('#tbDataTable').empty();
+                    for (var i = 0; i < data.length; i++) {
+                        var blog = data[i];
+
+                        var row = `<tr>
+                            <td>${i + 1}</td>
+                            <td>${blog.BlogTitle}</td>
+                            <td>${blog.BlogContent}</td>
+                            <td>${blog.BlogAuthor}</td>
+                            <td>
+                                 <a href="/BlogAjax/Edit/${blog.BlogId}" class="btn btn-outline-primary">Edit</a>
+                                  <button type="button" data-id="${blog.BlogId}" class="btn btn-outline-danger btn-delete">Delete</button>
+                             </td>
+                        </tr>`;
+                        $('#tbDataTable').append(row);
+                     }  
+                     bildDeleteButton();
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error loading data:', error);
+                }
+            });
+        }
+       
+        function bildDeleteButton(){
+             $('.btn-delete').click ( function (){
+                 const id = $(this).data('id');
+
+                   $.ajax({
+                     url: '/BlogAjax/Delete',
+                     type: 'POST',
+                     data: {
+                         Id: id
+                     },
+                     success: function(data) {
+                         console.log(data);
+                         if (!data.isSuccess) {
+                             alert(data.Message);
+                             return; // Redirect to the blog list page
+                         }
+                         alert(data.Message);
+                         location.href = "/BlogAjax";
+                     },
+                     error: function(error) { // Fixed typo: "Error" to "error" and "fucntion" to "function"
+                         console.log(error);
+                     }
+                 });
+             })
+        }
+
+    </script>
+}

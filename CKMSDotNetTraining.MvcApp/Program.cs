@@ -12,7 +12,12 @@ builder.Services.AddScoped<IBlogService, BlogService>();
 
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddJsonOptions(option =>
+{
+    option.JsonSerializerOptions.PropertyNamingPolicy = null; // To keep property names as is, without camel casing
+}
+
+);
 
 var app = builder.Build();
 

@@ -1,0 +1,55 @@
+﻿@{  
+    ViewData["Title"] = "Create Blog ";  
+}  
+
+<div class="mb-3">  
+    <label for="txtTitle" class="form-label">Title</label>  
+    <input type="text" class="form-control" id="txtTitle" name="Title">  
+</div>  
+<div class="mb-3">  
+    <label for="txtAuthor" class="form-label">Author</label>  
+    <input type="text" class="form-control" id="txtAuthor" name="Author">  
+</div>  
+<div class="mb-3">  
+    <label for="txtContent" class="form-label">content</label>  
+    <input type="text" class="form-control" id="txtContent" name="Content">  
+</div>  
+
+<button type="button" id="btnSave" class="btn btn-success">Save</button>  
+<button type="button" id="btnCancel" class="btn btn-secondary">Cancel</button>  
+
+@section scripts {  
+    <script>  
+        $('#btnSave').click(function() {  
+            const title = $('#txtTitle').val();  
+            const author = $('#txtAuthor').val();  
+            const content = $('#txtContent').val();  
+
+            $.ajax({  
+                url: '/BlogAjax/Save',  
+                type: 'POST',  
+                data: {  
+                    Title: title,  
+                    Author: author,  
+                    Content: content  
+                },  
+                success: function(data) {  
+                    console.log(data);  
+                    if (!data.isSuccess) {  
+                        alert(data.Message);  
+                        return; // Redirect to the blog list page  
+                    }  
+                    alert(data.Message);  
+                    location.href = "/BlogAjax";  
+                },  
+                error: function(error) { // Fixed typo: "Error" to "error" and "fucntion" to "function"  
+                    console.log(error);  
+                }  
+            });  
+        });
+
+        $('#btnCancel').click(function() {
+            location.href = "/BlogAjax"; 
+        });
+    </script>  
+}
