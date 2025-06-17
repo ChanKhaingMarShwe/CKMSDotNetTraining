@@ -18,6 +18,23 @@ namespace CKMSDotNetTraining.ChartWebApp.Models
     }
 
 
+
+    public class ApexChartLineChartModel
+    {
+        public List<DataPoint> SeriesData { get; set; }
+
+        public class DataPoint
+        {
+            public string Date { get; set; } // Format: "yyyy-MM-dd"
+            public double Value { get; set; }
+        }
+    }
+
+    public class ApexChartReadialBarChartModel
+    {
+        public int[] series;
+    }
+
 }
 
 

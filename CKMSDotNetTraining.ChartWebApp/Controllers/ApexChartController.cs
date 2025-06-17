@@ -49,5 +49,38 @@ namespace CKMSDotNetTraining.ChartWebApp.Controllers
             return View(model);
         }
 
+
+        public IActionResult LineChart()
+        {
+            var model = new ApexChartLineChartModel
+            {
+                SeriesData = new List<ApexChartLineChartModel.DataPoint>
+                {
+                    new() { Date = "2003-01-01", Value = 34 },
+                new() { Date = "2003-02-01", Value = 44 },
+                new() { Date = "2003-03-01", Value = 54 },
+                new() { Date = "2003-04-01", Value = 32 },
+                new() { Date = "2003-05-01", Value = 45 },
+                new() { Date = "2003-06-01", Value = 48 },
+                new() { Date = "2003-07-01", Value = 37 },
+                new() { Date = "2003-08-01", Value = 41 },
+                new() { Date = "2003-09-01", Value = 52 },
+                new() { Date = "2003-10-01", Value = 63 },
+                new() { Date = "2003-11-01", Value = 72 },
+                }
+            };
+            return View(model);
+        }
+
+
+        public IActionResult RadialBarChart()
+        {
+            ApexChartReadialBarChartModel model = new ApexChartReadialBarChartModel
+            {
+                series = new int[] { 76, 67, 61, 90 }
+            };
+            return View(model);
+        }
+
     }
 }
