@@ -36,6 +36,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.MvcApp",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.ChartWebApp", "CKMSDotNetTraining.ChartWebApp\CKMSDotNetTraining.ChartWebApp.csproj", "{9B5A22B0-6F8A-4017-95E5-8B0EA247C303}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.Project1.Api", "CKMSDotNetTraining.Project1.Api\CKMSDotNetTraining.Project1.Api.csproj", "{3022F43A-60C5-4151-B65C-AB4629BC0991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKMSDotNetTraining.Project1.MvcApp", "CKMSDotNetTraining.Project1.MvcApp\CKMSDotNetTraining.Project1.MvcApp.csproj", "{D0041C01-BFC8-4AC4-ACA1-675BB13C736B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,6 +102,14 @@ Global
 		{9B5A22B0-6F8A-4017-95E5-8B0EA247C303}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B5A22B0-6F8A-4017-95E5-8B0EA247C303}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B5A22B0-6F8A-4017-95E5-8B0EA247C303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3022F43A-60C5-4151-B65C-AB4629BC0991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3022F43A-60C5-4151-B65C-AB4629BC0991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3022F43A-60C5-4151-B65C-AB4629BC0991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3022F43A-60C5-4151-B65C-AB4629BC0991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0041C01-BFC8-4AC4-ACA1-675BB13C736B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0041C01-BFC8-4AC4-ACA1-675BB13C736B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0041C01-BFC8-4AC4-ACA1-675BB13C736B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0041C01-BFC8-4AC4-ACA1-675BB13C736B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
